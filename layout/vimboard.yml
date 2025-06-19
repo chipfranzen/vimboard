@@ -1,0 +1,18 @@
+meta:
+  engine: 4.1.0
+points:
+  zones:
+    matrix:
+      columns:
+        index_1:
+        middle_1:
+          key.stagger: 6
+        ring_2:
+          key.stagger: -5
+        pinky:
+          key.stagger: -12
+          key.splay: -5
+          key.origin: [-12, -19]
+  rotate: 20
+  key:
+    padding: 1
