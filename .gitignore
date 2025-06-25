@@ -1,2 +1,37 @@
+# KiCad backup and autosave files
+~*
+*.bak
+*.tmp
+*.autosave
+
+# Generated files and caches
+*.kicad_prl          # Panel layout (auto-generated)
+*.kicad_wks          # Worksheet files (unless custom)
+fp-info-cache        # Footprint library cache
+sym-lib-table-bak
+*.net                # Legacy netlists
+*.xml
+*.xsl
+*.cmp
+*.sch-bak
+*-rescue.kicad_sch   # Rescue versions
+*-rescue.kicad_sym
+
+# Simulation output
+*.cir
+*.spice
+*.raw
+*.log
+*.plt
+
+# 3D model cache
+3d/
+
+# Exported manufacturing files
+gerbers/
+*.gbr
+*.gtl
+*.gts
+*.gbl
+*.drl
 *.zip
-*.lck
