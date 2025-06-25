@@ -1,18 +1,123 @@
 meta:
   engine: 4.1.0
+units:
+  # proxy spacing variables
+  kx: cx
+  ky: cy
+  # padding variables
+  px: kx + 2
+  py: ky + 2
+  # render choc switches in the preview
+  $default_width: cx
+  $default_height: cy
+
 points:
   zones:
     matrix:
+      anchor:
+        shift: [100, -100]
       columns:
-        index_1:
-        middle_1:
+        index:
+          key.column_net: P15
+        middle:
           key.stagger: 6
-        ring_2:
+          key.column_net: P14
+        ring:
           key.stagger: -5
+          key.column_net: P16
         pinky:
           key.stagger: -12
           key.splay: -5
           key.origin: [-12, -19]
-  rotate: 20
-  key:
-    padding: 1
+          key.column_net: P10
+      rows:
+        main:
+          row_net: P18
+    thumbs:
+      key:
+        padding: 1ky
+        spread: 1ky
+      anchor:
+        ref: matrix_index_main
+        shift: [-20, -30]
+      columns:
+        escape:
+          key.splay: -15
+          key.width: 1.5kx
+          key.column_net: P9
+      rows:
+        main:
+          row_net: P8
+
+outlines:
+  raw:
+    - where: true
+      what: rectangle
+      size: [px, py]
+  keys:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [kx - 0.5, ky - 0.5]
+  board:
+    - what: polygon
+      fillet: 2
+      points:
+        - ref: matrix_index_main
+          shift: [-1.55px, 1px]
+        - ref: matrix_index_main
+          shift: [-0.5px, 1px]
+        - ref: matrix_middle_main
+          shift: [-0.5px, 0.5px]
+        - ref: matrix_middle_main
+          shift: [0.5px, 0.5px]
+        - ref: matrix_ring_main
+          shift: [0.5px, 0.5px]
+        - ref: matrix_pinky_main
+          shift: [0.5px, 0.5px]
+        - ref: matrix_pinky_main
+          shift: [0.5px, -0.5px]
+        - ref: thumbs_escape_main
+          shift: [0.5px, -0.5px]
+        - ref: thumbs_escape_main
+          shift: [-0.5px, -0.5px]
+        - ref: thumbs_escape_main
+          shift: [-0.7px, 0.5px]
+  combo:
+  - name: board
+  - operation: subtract
+    name: keys
+
+pcbs:
+  vimboard:
+    outlines:
+      main:
+        outline: board
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        # is there a way to do this without the matrix? do I even need diodes?
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      promicro:
+        what: promicro
+        params:
+          # is this right? the reset and boot buttons for the kb2040 are on top
+          orientation: "up"
+        where:
+          ref.aggregate.parts: [thumbs_escape_main, matrix_index_main]
+          shift: [-0.6px, 0.6px]
+          rotate: -82.5
