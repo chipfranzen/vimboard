@@ -1,0 +1,45 @@
+* Vimboard
+  A custom novelty keyboard celebrating the vim motions.
+** Design decisions
+   ~ 4-key ergo layout celebrating vim motions
+   ~ choc switches and keycaps
+   ~ adafruit kb2040 controller
+   -- compatible with promicro
+   -- may need adjustments
+   ~ wired power
+
+** TODO
+   - (x) design key layout
+   - (x) ensure adafruit qtpy supports QMK (it does not)
+   - (x) design pcb
+    - (x) ergogen
+   --- (x) keys
+   --- (x) diodes
+   --- (x) processor
+   - (x) kicad pcb
+   - (x) design logo
+   - ( ) design case
+
+** TO BUY
+   - ( ) microcontroller https://www.adafruit.com/product/5302
+   - ( ) pcb
+   - ( ) case
+   - ( ) switches
+   - ( ) keycaps
+   - ( ) soldering iron
+   - ( ) keycap remover
+   - ( ) flush cutter
+   - ( ) tweezers
+   - ( ) helping hand
+   - ( ) solder vaccuum
+
+** Ideas
+*** Vimboard
+    - thumb key. I did end up going with a thumb key.
+      - layer key?
+    --- esc key?
+
+*** Successor Keyboard
+    - navigation layer customized around vim motions
+    - colemak or workman for the base layout
+    - colemak-dh seems promising
