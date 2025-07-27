@@ -7,7 +7,7 @@
    -- choc keycaps (need to get the higher quality material, forget what it's called.)
    ~ adafruit kb2040 controller
    -- compatible with promicro
-   -- may need adjustments
+   -- worked great
    ~ wired power
 
 ** TODO
@@ -21,8 +21,8 @@
    - (x) kicad pcb
    - (x) design logo
    - (x) ensure switches are hot-swappable (they are, with hotswap sockets)
-   - ( ) assemble board
-   - ( ) firmware
+   - (x) assemble board
+   - (x) firmware
    - ( ) design case
 
 ** TO BUY
@@ -45,16 +45,15 @@
    - (x) usb-c cable
 *** Optional
    - ( ) case
-   - ( ) soldering iron
+   - (x) soldering iron
    - ( ) keycap remover
-   - ( ) helping hand
+   - (x) helping hand
    - ( ) solder vaccuum
 
 ** Ideas
 *** Vimboard
     - thumb key. I did end up going with a thumb key.
-      - layer key?
-    --- esc key?
+    - went with a layer key instead of a dedicated esc key to learn more about qmk.
 
 *** Successor Keyboard
     - navigation layer customized around vim motions
@@ -64,9 +63,17 @@
     - miryoku layout seems like a good starting point for 36 keys.
     - seniply for 34 keys.
     - maybe make 3 variants: 36, 36 with thumbs moved, and 34
+    - consider an outer pinky key instead of a top pinky key.
 
 
 * Post-Mortem
   - Get non-lead option for pcb.
   - Create a spreadsheet for the bill of materials. Don't buy anything until that's completely
     settled. I ended up buying from too many different stores this time around.
+  - Thumb key was rotated in the wrong direction.
+  - There wasn't a ton of room for the rubber feet on the edge of the board, so the board can
+    wobble a bit. All the keys must be within the perimeter of the polygon defined by the feet.
+  - Soldering was fun and not too difficult. The pins on the pcb socket are a bit delicate though.
+  - Boot and reset buttons needed to put the mcu into bootloader mode.
+  - Not wild about the kailh sunsets. I might look from something with a lower actuation force.
+    Might also look into linears.
