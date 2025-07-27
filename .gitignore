@@ -29,6 +29,7 @@ sym-lib-table-bak
 
 # Exported manufacturing files
 gerbers/
+vimboard-gerbers/
 *.gbr
 *.gtl
 *.gts
