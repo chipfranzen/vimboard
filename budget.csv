@@ -1,0 +1,19 @@
+item,vendor,price,tax,shipping,total
+pcb,jlcpbc,2.00,0.18,3.30,5.48
+switch tester,aliexpress,0.99,0.08,,1.07
+controller,adafruit,8.95,,,8.95
+usb-cable,adafruit,5.49,1.63,5.49,12.61
+diodes,keebd,1.00,,,1.00
+rubber feet,keebd,2.00,,,2.00
+10x hotswap sockets,keebd,3.00,,,3.00
+10x sunset switches,keebd,12.00,,,12.00
+10x keycaps,keebd,4.00,,9.00,13.00
+sockets and pins,little keyboards,7.49,,5.52,13.01
+flush cutter,amazon,8.26,,,8.26
+work mat,amazon,12.99,,,12.99
+tool box,amazon,26.99,,,26.99
+tweezers,amazon,5.99,,,5.99
+multimeter,amazon,13.99,,,13.99
+heat tape,amazon,7.99,7.44,,15.43
+pbc ruler,amazon,7.99,,,7.99
+totals,,123.13,9.33,23.31,155.77
